@@ -1,0 +1,46 @@
+<tr class="<%= i % 2 !== 0 ? 'even' : ''%>" data-list="<%= list.rank %>">
+    <td>
+        <span class="league-table-list" data-list="<%= list.rank %>"><%= list.rank %></span>
+    </td>
+    <td>
+        <div class="league-schedule-team-data cup-schedule-team-data ml20">
+            <div class="league-schedule-team-img pull-left mr10">
+                <a href="/team/<%=list.id%>">
+                    <img src="//thumb.vpgcdn.com/<%=list.logo%>/c/63x33" s
+                         tyle="width:63px;height:33px" width="63" height="33" alt="<%=list.name%>">
+                </a>
+            </div>
+            <h5 class="league-schedule-team-name ellipsis text-left" title="<%=list.name%>">
+                <a href="/team/<%=list.id%>" class="league-schedule-match-link">
+                    <%=list.name%>
+                </a>
+            </h5>
+        </div>
+    </td>
+    <td>
+        <img src="http://static.dota2.vpgcdn.com/img/flag/<%=list.country_code%>.gif"
+             style="width:16px;height:11px" width="16" height="11" alt="<%=list.country%>">
+    </td>
+    <td>
+        <%=list.score%>
+    </td>
+    <td>
+        <%=list.win%>
+    </td>
+    <td>
+        <%=list.draw%>
+    </td>
+    <td>
+        <p class="mr20">
+            <%=list.loss%>
+        </p>
+    </td>
+    <td>
+        <%=list.win_rate%>%
+    </td>
+    <td>
+        <div class="progress tournament-user-progress tournament-team-progress">
+            <div class="progress-bar progress-bar-winrate progress-bar-striped" role="progressbar" aria-valuemin="100" aria-valuemax="100" style="width: <%=list.win_rate%>%;" aria-valuenow="0"></div>
+        </div>
+    </td>
+</tr>
